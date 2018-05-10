@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head >
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Movie trailers</title>
+
+   <style>
+
+    .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top:100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+
+.modal-content {
+    margin: 5% auto; 
+    padding: 20px;
+    width: 560px; 
+    min-height:500px;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    background-color: black;
+    text-decoration: none;;
+    cursor: pointer;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+      .container{
+        display: flex;
+        flex-wrap:wrap;
+        font-family:arial,cursive;
+       }
+     .box{
+          width:100%;
+          min-height:150px;
+          cursor:pointer;
+        }
+      @media screen and (min-width :450px)  {
+      div.s1:hover{
+             border:1px;
+             background-color:skyblue;
+             }
+       div.s2:hover{
+             border:1px;
+             background-color:black;
+             }
+       div.s3:hover{
+             border:1px;
+             background-color:grey;
+             }  
+       div.s4:hover{
+             border:1px;
+             background-color:red;
+             }
+       div.s5:hover{
+             border:1px;
+             background-color:yellow;
+             }
+       div.s6:hover{
+             border:1px;
+             background-color:pink;
+             }       
+       .s1{width:33%;}
+       .s2{width:33%;}
+       .s3{width:33%;}
+       .s4{width:33%;}
+       .s5{width:33%;}
+       .s6{width:33%;}
+       h1 {background-color:black;}
+        }
+      h1 {background-color:black;
+         font-family:arial,italic;}
+         </style>
+         <div>
+      
+         <div id="myModal" class="modal">
+
+  
+           <div class="modal-content">
+                <span class="close">&times;</span>
+                 <iframe id="f" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          
+        </div>
+</div>
+<script>
+   
+var modal = document.getElementById('myModal');
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+    onc = function(c) {
+    modal.style.display = "block";
+    c='https://www.youtube.com/embed/'+c;
+    console.log(c);
+    document.getElementById("f").setAttribute("src",c);
+}
+
+
+    span.onclick = function() {
+        modal.style.display = "none";
+} 
+
+
+   window.onclick = function(event) {
+       if (event.target == modal) {
+          modal.style.display = "none";
+    } 
+}
+</script> 
+   
+      
+</head>
+
+
+<body style="text-align:center">
+   <h1 style="color:white">MOVIE TRAILERS</h1>
+   <div class="container">
+   <div class="box s1" onclick="onc('6ZfuNTqbHE8')"> <img vspace="20" src="avengers.jpeg" style="width:50%"height="300" hspace="20";><h2 style="color:white;">AVENGERS</h2></div> 
+   <div class="box s2" onclick="onc('Z_PODraXg4E')"> <img vspace="20" src="hey dil.jpeg" style="width:60%"height="300" hspace="20"><h2 style="color:white;">HEY DIL HAI MUSHKIL</h2></div>
+   <div class="box s3" onclick="onc('OiTiKOy59o4')"> <img vspace="20" src="gravity.jpeg" style="width:60%" height="300" hspace="20"><h2 style="color:white;">GRAVITY</h2>  </div>   
+   <div class="box s4" onclick="onc('KMWS5y2gZ6E')"> <img vspace="20" src="ban.jpeg" style="width:60%"height="300"  hspace="20"><h2 style="color:white;">BHARAT ANE NENU</h2></div>
+   <div class="box s5" onclick="onc('FnCdOQsX5kc')"> <img vspace="20" src="it.jpeg" style="width:60%"height="300"  hspace="20"><h2 style="color:white;">IT</h2></div>
+   <div class="box s6" onclick="onc('Gdzif0Px_qY')"> <img vspace="20" src="banglore.jpg" style="width:60%"height="300"  hspace="20"><h2 style="color:white;">Banglore Days</h2></div>
+   
+     
+
+
+   
+   
+</body>
+
+</html>
